@@ -1,3 +1,35 @@
 .grid {
-  margin: 100px 0 0;
+  display: grid;
+  grid-row-gap: 0px;
+}
+
+.row {
+  height: 25px;
+}
+
+.controls {
+  width: 1250px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  font-size: 24px;
+}
+
+.speedControls,
+.algoControls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+button {
+  margin: 0 20px;
+  height: 35px;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 0px;
 }
