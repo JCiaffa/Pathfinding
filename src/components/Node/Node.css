@@ -1,6 +1,7 @@
 .node {
   width: 25px;
   height: 25px;
+
   outline: 1px solid rgb(175, 216, 248);
   display: inline-block;
 }
@@ -14,6 +15,9 @@
 }
 
 .node-visited {
+  font-size: 15px;
+  position: relative;
+  top: 0px;
   animation-name: visitedAnimation;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
@@ -52,9 +56,21 @@
 
 .node-wall {
   background-color: rgb(12, 53, 71);
+  color: rgb(12, 53, 71);
+  animation-name: wall;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
 }
 
 .node-shortest-path {
+  font-size: 15px;
+  position: relative;
+  top: 0px;
   animation-name: shortestPath;
   animation-duration: 1s;
   animation-timing-function: ease-out;
@@ -79,5 +95,19 @@
   100% {
     transform: scale(1);
     background-color: rgb(255, 254, 106);
+  }
+}
+
+@keyframes wall {
+  0% {
+    transform: scale(0.6);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
